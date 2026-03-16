@@ -17,7 +17,7 @@ https://tienda-magica-lago-puelo.netlify.app/
 
 ## 📸 Website Preview
 
-![Tienda Magica Homepage](imagenes/screenhot-home.PNG)
+![Tienda Magica Homepage](imagenes/screenshot-home.png)
 
 ## 📂 Project Structure
 
