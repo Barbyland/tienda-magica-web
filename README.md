@@ -26,7 +26,7 @@ https://tienda-magica-lago-puelo.netlify.app/
 
 ## 📸 Vista del Sitio
 
-![Tienda Magica Homepage](imagenes/screenshot-home.png)
+![Tienda Magica Homepage](imagenes/screenshot-home.PNG)
 
 ---
 
