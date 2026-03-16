@@ -1,0 +1,298 @@
+.header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,0.68);
+-webkit-backdrop-filter:blur(12px);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(95,159,152,0.18);
+transition:all .25s ease;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:88px;
+gap:24px;
+}
+
+.logo-wrap{
+display:flex;
+align-items:center;
+}
+
+.logo-img{
+width:110px;
+transition:transform .25s ease;
+object-fit:contain;
+display:block;
+}
+
+.logo-img:hover{
+transform:scale(1.05);
+}
+
+.menu{
+display:flex;
+gap:28px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.menu a{
+font-weight:600;
+letter-spacing:.2px;
+color:var(--text);
+position:relative;
+transition:color .2s ease;
+}
+
+.menu a:hover{
+color:var(--secondary);
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:var(--secondary);
+transition:width .25s ease;
+border-radius:2px;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+.hero{
+padding:95px 0 60px;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:clamp(2.6rem,5vw,3.6rem);
+font-weight:800;
+line-height:1.15;
+letter-spacing:-0.5px;
+margin-bottom:15px;
+color:var(--primary-dark);
+}
+
+.hero-text p{
+font-size:1.1rem;
+margin-bottom:20px;
+color:var(--muted);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:14px;
+transition:transform .3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.productos-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+/* Left column: título, dirección, teléfono, botón; Right column: mapa */
+.location-text{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+@media (max-width:800px){
+  .location-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:start;
+  min-height:380px;
+}
+
+.contact-info{
+  text-align:left;
+}
+
+.contact-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-image img{
+  width:100%;
+  height:100%;
+  max-height:600px;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width:800px){
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+}
+
+.map-box{
+min-height:380px;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(53, 81, 77, 0.10);
+border:1px solid var(--border);
+width:100%;
+}
+
+.map-box iframe{
+width:100%;
+height:100%;
+min-height:380px;
+border:0;
+display:block;
+}
+
+.footer{
+background:var(--primary-dark);
+color:white;
+padding:30px 0;
+}
+
+.footer-content{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+@media (max-width:900px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+.productos-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media (max-width:600px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.productos-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:32px;
+  color:var(--text);
+  cursor:pointer;
+  line-height:1;
+}
+
+@media (max-width:768px){
+  .nav{
+    position:relative;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    min-height:90px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .menu{
+    display:flex;
+    position:absolute;
+    top:100%;
+    right:0;
+    width:220px;
+    background:rgba(255,255,255,0.96);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(95,159,152,0.18);
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+    padding:16px;
+    flex-direction:column;
+    gap:14px;
+    z-index:1200;
+    opacity:0;
+    transform:translateY(-8px);
+    pointer-events:none;
+    visibility:hidden;
+    transition:opacity .25s ease, transform .25s ease;
+  }
+
+  .menu.active{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+    visibility:visible;
+  }
+
+  .menu a{
+    padding:8px 0;
+  }
+
+  .logo-img{
+    width:88px;
+    height:auto;
+  }
+}
