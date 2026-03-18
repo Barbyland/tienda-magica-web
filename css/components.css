@@ -1,12 +1,12 @@
 .logo-wrap{
 display:flex;
 align-items:center;
-gap:10px;
+gap:14px;
 }
 
 .logo-img{
-width:80px;
-height:80px;
+width:82px;
+height:auto;
 object-fit:contain;
 }
 
@@ -34,57 +34,107 @@ color:var(--secondary);
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:16px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.25s;
+position:relative;
+min-height:340px;
+border-radius:20px;
+box-shadow:0 12px 28px rgba(0,0,0,0.10);
+transition:transform 0.3s;
+transform-style:preserve-3d;
+perspective:1200px;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
-
-.producto-card{
-background:white;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.25s;
-}
-
-.producto-card:hover{
+.card:hover,
+.card:focus-within{
 transform:translateY(-6px);
 }
 
-.producto-card img{
-height:230px;
-object-fit:cover;
+.card-flip:hover .card-front,
+.card-flip:focus-within .card-front,
+.card-flip.is-flipped .card-front{
+transform:rotateY(-180deg);
 }
 
-.producto-card h4{
-padding:15px 15px 5px;
+.card-flip:hover .card-back,
+.card-flip:focus-within .card-back,
+.card-flip.is-flipped .card-back{
+transform:rotateY(0deg);
+}
+
+.card-face{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:26px;
+border-radius:20px;
+overflow:hidden;
+backface-visibility:hidden;
+transition:transform 0.7s ease;
+}
+
+.card-front{
+background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,241,232,0.96));
+border:1px solid rgba(95,159,152,0.14);
+}
+
+.card-back{
+padding:0;
+background:#fff;
+transform:rotateY(180deg);
+border:1px solid rgba(95,159,152,0.14);
+justify-content:flex-end;
+}
+
+.card-icon{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:58px;
+height:58px;
+margin-bottom:18px;
+border-radius:16px;
+background:rgba(95,159,152,0.12);
+font-size:1.8rem;
+}
+
+.card h3{
+margin-bottom:10px;
 color:var(--primary-dark);
 }
 
-.producto-card p{
-padding:0 15px 20px;
-font-size:14px;
+.card p{
 color:var(--muted);
 }
 
-.whatsapp-float{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25d366;
-color:white;
-padding:14px 20px;
-border-radius:50px;
-font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+.card-back img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:0;
 }
 
-.whatsapp-float:hover{
-transform:scale(1.05);
+.card-back-copy{
+position:absolute;
+left:18px;
+right:18px;
+bottom:18px;
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,0.92);
+box-shadow:0 10px 24px rgba(0,0,0,0.12);
 }
+
+.card-back-copy h3{
+margin-bottom:6px;
+}
+
+.card-back-copy p{
+font-size:14px;
+}
+
+.card:focus-visible{
+outline:3px solid rgba(238,155,203,0.65);
+outline-offset:4px;
+}
+
