@@ -4,7 +4,7 @@
 # ✨ Tienda Mágica Website
 
 <p align="center">
-  <img src="imagenes/preview-home.png" alt="Vista previa de Tienda Mágica" width="900">
+  <img src="imagenes/preview-home.PNG" alt="Vista previa de Tienda Mágica" width="900">
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ El objetivo del proyecto fue crear una web clara, cálida y visualmente atractiv
 - Deploy automático desde GitHub a Netlify
 
 ### 📂 Estructura del proyecto
-
+```bash
 tienda-magica-web/
 ├── index.html
 ├── css/
@@ -115,6 +115,7 @@ Direct contact through WhatsApp and Instagram
 Automatic deployment from GitHub to Netlify
 
 📂 Project structure
+```bash
 tienda-magica-web/
 ├── index.html
 ├── css/
