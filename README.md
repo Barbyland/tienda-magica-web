@@ -81,6 +81,7 @@ publicación online
 Licenciada en Turismo | Frontend Developer | Técnica en Programación | QA Tester
 
 __________________________________________________________________________________________________________________________
+## 🇬🇧 English
 
 Tienda Mágica is a landing page demo created as a visual proposal for a local business focused on stationery, photocopy services, party supplies, baking supplies, and personalized products.
 
