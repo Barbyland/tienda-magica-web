@@ -48,7 +48,7 @@ tienda-magica-web/
 ├── js/
 ├── imagenes/
 └── admin/
-
+```
 ---
 
 ## 📦 Deploy
@@ -122,6 +122,8 @@ tienda-magica-web/
 ├── js/
 ├── imagenes/
 └── admin/
+```
+
 📦 Deployment
 
 The demo project is deployed on Netlify and connected to GitHub for automatic publishing.
