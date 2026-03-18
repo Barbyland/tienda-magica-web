@@ -91,29 +91,20 @@ Note: this project was developed as a demo/commercial proposal. The images used 
 
 🚀 Technologies used
 
-HTML5
-
-CSS3
-
-JavaScript
-
-Netlify for deployment
+- HTML5
+- CSS3
+- JavaScript
+- Netlify for deployment
 
 ✨ Features
 
-Responsive design
-
-Main hero section with call to action
-
-Category section with visual interaction
-
-Store and product image gallery
-
-Location section with Google Maps access
-
-Direct contact through WhatsApp and Instagram
-
-Automatic deployment from GitHub to Netlify
+- Responsive design
+- Main hero section with call to action
+- Category section with visual interaction
+- Store and product image gallery
+- Location section with Google Maps access
+- Direct contact through WhatsApp and Instagram
+- Automatic deployment from GitHub to Netlify
 
 📂 Project structure
 ```bash
