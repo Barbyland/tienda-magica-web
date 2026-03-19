@@ -23,11 +23,26 @@ background:var(--primary);
 color:white;
 }
 
+.btn-primario{
+background:var(--primary);
+color:white;
+}
+
 .btn-primary:hover{
 background:var(--primary-dark);
 }
 
+.btn-primario:hover{
+background:var(--primary-dark);
+}
+
 .btn-secondary{
+background:white;
+border:2px solid var(--secondary);
+color:var(--secondary);
+}
+
+.btn-secundario{
 background:white;
 border:2px solid var(--secondary);
 color:var(--secondary);
