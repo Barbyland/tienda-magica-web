@@ -74,7 +74,11 @@ if (galleryCarousel) {
   let currentIndex = 0;
   let visibleSlides = 4;
 
-  const getVisibleSlides = () => (window.innerWidth <= 600 ? 2 : 4);
+  const getVisibleSlides = () => {
+  if (window.innerWidth <= 600) return 2;
+  if (window.innerWidth <= 900) return 3;
+  return 4;
+};
   const getStepSize = () => {
     const slide = slides[0];
     if (!slide) return 0;

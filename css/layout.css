@@ -153,9 +153,195 @@ gap:14px;
 }
 
 .cards{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card{
+  position: relative;
+  min-height: 340px;
+  perspective: 1200px;
+}
+
+.card-flip{
+  cursor: pointer;
+}
+
+.card-face{
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 28px 26px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(95,159,152,0.10);
+  box-shadow: 0 14px 34px rgba(53, 81, 77, 0.08);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform .7s ease;
+  overflow: hidden;
+}
+
+.card-front{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  transform: rotateY(0deg);
+}
+
+.card-front h3{
+  margin: 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+}
+
+.card-front p{
+  margin: 0;
+  min-height: 110px;
+  color: var(--muted);
+}
+
+.card-back{
+  transform: rotateY(180deg);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+
+.card-back img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 22px 22px 0 0;
+}
+
+.card-back-copy{
+  padding: 18px 20px 20px;
+}
+
+.card-back-copy h3{
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+
+.card-back-copy p{
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-flip:hover .card-front,
+.card-flip:focus .card-front,
+.card-flip:focus-within .card-front{
+  transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back,
+.card-flip:focus .card-back,
+.card-flip:focus-within .card-back{
+  transform: rotateY(0deg);
+}
+
+.card-icon{
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 1.8rem;
+  background: #e8ece7;
+}
+
+.card:nth-child(1) .card-icon{
+  background: rgba(95,159,152,0.15);
+}
+
+.card:nth-child(2) .card-icon{
+  background: rgba(238,155,203,0.18);
+}
+
+.card:nth-child(3) .card-icon{
+  background: rgba(231,204,103,0.22);
+}
+
+.card:nth-child(1) .card-front{
+  border-top: 4px solid var(--primary);
+}
+
+.card:nth-child(2) .card-front{
+  border-top: 4px solid var(--secondary);
+}
+
+.card:nth-child(3) .card-front{
+  border-top: 4px solid var(--accent);
+}
+
+@media (max-width: 992px){
+  .cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px){
+  .cards{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    min-height: 320px;
+  }
+
+  .card-back img{
+    height: 170px;
+  }
+}
+.services {
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.services-cta {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .gallery-carousel{
@@ -241,12 +427,34 @@ gap:25px;
   text-align:left;
 }
 
+.contact-info strong {
+  color: var(--primary-dark);
+}
+.contact-info > p:first-of-type {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.contact-info h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-info p,
+.contact-info ul {
+  margin-bottom: 0;
+}
+
+.contact-info ul {
+  margin-top: 6px;
+  padding-left: 22px;
+}
+
 .contact-actions{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
   gap:14px;
-  margin-top:24px;
+  margin-top:28px;
 }
 
 .contact-image{
@@ -618,6 +826,11 @@ height:210px;
   }
 
   .footer-button{
-    flex: 1 1 160px;
-  }
+  flex: 1 1 100%;
+  width: 100%;
+  min-height: 48px;
+  justify-content: center;
+  text-align: center;
+  padding: 0 18px;
+}
 }
