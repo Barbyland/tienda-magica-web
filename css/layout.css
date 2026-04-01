@@ -432,6 +432,16 @@ align-items:center;
   color:var(--muted);
 }
 
+.personalized-cta{
+  max-width:720px;
+  margin:32px auto 0;
+  text-align:center;
+}
+
+.personalized-cta p{
+  margin:0 0 18px;
+}
+
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
