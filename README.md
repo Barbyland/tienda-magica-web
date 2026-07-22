@@ -8,22 +8,21 @@
 </p>
 
 <p align="center">
-  Demo de sitio web para un comercio local de Lago Puelo, Chubut.
+  Sitio web publicado para Tienda Mágica, comercio local de Lago Puelo, Chubut.
 </p>
 
 <p align="center">
-  <a href="https://tiendamagica.netlify.app/" target="_blank"><strong>🔗 Ver demo online</strong></a>
+  <a href="https://tiendamagica.netlify.app/" target="_blank"><strong>🔗 Ver web online</strong></a>
 </p>
 
 ---
 
 ## 🇪🇸 Español
 
-**Tienda Mágica** es una **demo de landing page** desarrollada como propuesta visual para un comercio local dedicado a librería, fotocopias, cotillón, repostería y productos personalizados.
+**Tienda Mágica** es un sitio web desarrollado y publicado para un comercio local dedicado a librería, fotocopias, cotillón, repostería y productos personalizados.
 
-El objetivo del proyecto fue crear una web clara, cálida y visualmente atractiva para mostrar mejor el negocio, sus categorías, ubicación y canales de contacto, con una estructura simple y responsive para desktop y mobile.
+El objetivo del proyecto fue crear una presencia digital clara, cálida y visualmente atractiva para presentar el negocio, sus categorías de productos, servicios, ubicación y canales de contacto. El sitio cuenta con una estructura responsive adaptada a computadoras, tablets y dispositivos móviles.
 
-> **Nota:** este proyecto fue desarrollado como demo/propuesta comercial. Las imágenes utilizadas corresponden a material de referencia visual y podrían ser reemplazadas por contenido definitivo del cliente en una versión final.
 
 ### 🚀 Tecnologías utilizadas
 - **HTML5**
@@ -59,19 +58,19 @@ Cada actualización enviada a la rama `main` genera automáticamente una nueva p
 
 ---
 
-👩‍💻 Sobre este proyecto
+## 👩‍💻 Sobre este proyecto
 
-Este sitio fue desarrollado como una propuesta demo de servicio web, aplicando criterios de:
+Este sitio fue desarrollado como un proyecto real para fortalecer la presencia digital de Tienda Mágica y facilitar el acceso de sus clientes a la información del comercio.
 
-diseño responsive
+El proyecto incluyó:
 
-estructura visual
-
-organización de contenido
-
-experiencia de usuario
-
-publicación online
+- Organización y adaptación del contenido
+- Diseño visual responsive
+- Presentación de productos y servicios
+- Integración con WhatsApp, Instagram y Google Maps
+- Optimización de la navegación en dispositivos móviles
+- Configuración del despliegue automático mediante GitHub y Netlify
+- Publicación y mantenimiento del sitio
 
 ---
 ## 👩‍💻 Autora
@@ -83,11 +82,10 @@ Licenciada en Turismo | Frontend Developer | Técnica en Programación | QA Test
 __________________________________________________________________________________________________________________________
 ## 🇬🇧 English
 
-Tienda Mágica is a landing page demo created as a visual proposal for a local business focused on stationery, photocopy services, party supplies, baking supplies, and personalized products.
+**Tienda Mágica** is a published website developed for a local business specializing in stationery, photocopy services, party supplies, baking supplies and personalized products.
 
-The goal of the project was to build a clean, warm, and visually appealing website to better showcase the business, its categories, location, and contact channels, with a simple responsive structure for desktop and mobile.
+The goal of the project was to create a clear, warm and visually appealing digital presence to showcase the business, its product categories, services, location and contact channels. The website provides a responsive experience across desktop, tablet and mobile devices.
 
-Note: this project was developed as a demo/commercial proposal. The images used are reference visuals and may be replaced by final client content in a production version.
 
 🚀 Technologies used
 
